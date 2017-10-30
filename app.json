@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "sdkVersion": "22.0.0",
+    "description": "Testing ListView to show Array of Data.",
+    "icon": "./img/icon.png",
+    "name": "Maral's List View Prototype",
+    "slug": "list-view-sample",
+    "privacy": "public"
+  }
+}
