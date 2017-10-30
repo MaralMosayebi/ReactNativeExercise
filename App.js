@@ -3,6 +3,7 @@ import { AppRegistry, Text, View, StyleSheet, Button, FlatList } from 'react-nat
 import { StackNavigator } from 'react-navigation';
 
 
+
 class Greeting extends Component {
   render() {
     return (
@@ -13,8 +14,9 @@ class Greeting extends Component {
 
 class HomeScreen extends Component {
   static navigationOptions = {
-    title: 'Welcome',
+    title: 'Home',
   };
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -26,9 +28,9 @@ class HomeScreen extends Component {
           <Text style={[styles.description]}>Welcome To this Prototype!</Text>
         </View>
         <View style={{ flex: 3, backgroundColor: 'steelblue', justifyContent: 'center', alignItems: 'center' }}>
-          <Button
+        <Button
             title="Show List"
-            style={[styles.button]}
+            color="black"
             onPress={() =>
               navigate('ShowList', { name: 'David' })
             }
@@ -41,31 +43,31 @@ class HomeScreen extends Component {
 
 class ShowListPage extends Component {
   static navigationOptions = {
-    title: 'Chat with Lucy',
+    title: 'List',
   };
   render() {
     return (
       <View style={styles.container}>
         <FlatList
           data={[
-            { key: 'Devin' },
-            { key: 'Jackson' },
-            { key: 'James' },
-            { key: 'Joel' },
-            { key: 'John' },
-            { key: 'Jillian' },
-            { key: 'Jimmy' },
-            { key: 'Julie' },
-            { key: 'Maral' },
-            { key: 'Anahita' },
-            { key: 'Majid' },
-            { key: 'Faranak' },
-            { key: 'Hasan' },
-            { key: 'Esmaeil' },
-            { key: 'Simin' },
-            { key: 'jooojoo' },
-            { key: 'jooojoo222' },
-            { key: 'jooojo3333o' },
+            { key: 'Item 1' },
+            { key: 'Item 2' },
+            { key: 'Item 3' },
+            { key: 'Item 4' },
+            { key: 'Item 5' },
+            { key: 'Item 6' },
+            { key: 'Item 7' },
+            { key: 'Item 8' },
+            { key: 'Item 9' },
+            { key: 'Item 10' },
+            { key: 'Item 11' },
+            { key: 'Item 12' },
+            { key: 'Item 13' },
+            { key: 'Item 14' },
+            { key: 'Item 15' },
+            { key: 'Item 16' },
+            { key: 'Item 17' },
+            { key: 'Item 18' },
           ]}
           renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
         />
@@ -92,14 +94,15 @@ const styles = StyleSheet.create({
     paddingTop: 22
   },
   item: {
-    padding: 10,
+    padding: 30,
     fontSize: 18,
     borderWidth: 1,
-    borderBottomColor: 'black',
+    borderBottomColor: 'gray',
     borderStyle: 'solid',
     height: 44,
   },
   button: {
+    fontSize: 18,
     color: "#841584",
     backgroundColor: 'black',
   },
@@ -107,10 +110,10 @@ const styles = StyleSheet.create({
     paddingTop: 80,
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 20,
   },
   title: {
-    paddingTop: 50,
+    paddingTop: 40,
     color: 'black',
     fontWeight: 'bold',
     fontSize: 30,
